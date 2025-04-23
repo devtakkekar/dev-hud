@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QB Core HUD Overlay</title>
+    <link rel="stylesheet" href="hud.css">
+</head>
+<body>
+    <div id="hud-wrapper">
+        <div class="hud-player-name" id="player-name">PlayerName</div>
+        <div class="hud-bar-container">
+            <span class="hud-chevron left">
+                <svg class="indicator-arrow left" width="22" height="22" viewBox="0 0 22 22" style="vertical-align: middle;">
+                    <defs>
+                        <linearGradient id="arrowLeftGradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ffb300"/>
+                            <stop offset="100%" stop-color="#ff6a00"/>
+                        </linearGradient>
+                        <filter id="arrowGlowLeft" x="-40%" y="-40%" width="180%" height="180%">
+                            <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffb300" flood-opacity="0.7"/>
+                        </filter>
+                    </defs>
+                    <polygon points="16,3 6,11 16,19" fill="url(#arrowLeftGradient)" filter="url(#arrowGlowLeft)"/>
+                </svg>
+            </span>
+            <span class="hud-health-stack">
+                <span class="hud-armor-value" id="armor-value">100</span>
+                <span class="hud-level" id="player-level">100</span>
+            </span>
+            <div class="hud-bars">
+                <div class="hud-bar hud-bar-stamina" id="stamina-bar"></div>
+                <div class="hud-bar hud-bar-armor" id="armor-bar"></div>
+                <div class="hud-bar hud-bar-health" id="health-bar"></div>
+            </div>
+            <span class="hud-chevron right">
+                <svg class="indicator-arrow right" width="22" height="22" viewBox="0 0 22 22" style="vertical-align: middle;">
+                    <defs>
+                        <linearGradient id="arrowRightGradient" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ffb300"/>
+                            <stop offset="100%" stop-color="#ff6a00"/>
+                        </linearGradient>
+                        <filter id="arrowGlowRight" x="-40%" y="-40%" width="180%" height="180%">
+                            <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffb300" flood-opacity="0.7"/>
+                        </filter>
+                    </defs>
+                    <polygon points="6,3 16,11 6,19" fill="url(#arrowRightGradient)" filter="url(#arrowGlowRight)"/>
+                </svg>
+            </span>
+        </div>
+    </div>
+    <div id="speedo-streets">
+      <span id="speedo-street1"></span>
+      <span id="speedo-street2"></span>
+    </div>
+    <div id="speedometer-container" style="display:none">
+      <svg id="speedometer-gauge" viewBox="0 0 300 300" width="300" height="300">
+        <defs>
+          <linearGradient id="speedoGradient" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" stop-color="#a259ff"/>
+            <stop offset="100%" stop-color="#7b2ff7"/>
+          </linearGradient>
+          <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+            <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#a259ff" flood-opacity="0.7"/>
+          </filter>
+        </defs>
+        <!-- Segmented arc for speedometer (drawn in JS) -->
+        <g id="speedo-segments"></g>
+        <!-- Needle (if needed) -->
+        <line id="speedo-needle" x1="150" y1="150" x2="150" y2="50" stroke="#fff" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+        <!-- Tick marks (drawn in JS) -->
+        <g id="speedo-ticks"></g>
+        <!-- 0 and 240 labels -->
+        <text id="speedo-min" x="55" y="260" font-size="28" fill="#fff" filter="url(#glow)">0</text>
+        <text id="speedo-max" x="245" y="260" font-size="28" fill="#fff" filter="url(#glow)">240</text>
+      </svg>
+      <div id="speedo-center">
+        <div id="speedo-unit">km/h</div>
+        <div id="speedo-value">0</div>
+      </div>
+    </div>
+    <script src="hud.js"></script>
+</body>
+</html>

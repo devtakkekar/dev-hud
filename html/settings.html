@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUD Settings</title>
+    <link rel="stylesheet" href="hud.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div id="settings-modal" class="settings-modal">
+        <div class="settings-header">
+            <h2>HUD Settings</h2>
+            <button id="close-settings" class="close-btn" aria-label="Close">&times;</button>
+        </div>
+        <form id="hud-settings-form">
+            <label><input type="checkbox" id="show-health" checked> Show Health</label><br>
+            <label><input type="checkbox" id="show-armor" checked> Show Armor</label><br>
+            <label><input type="checkbox" id="show-sprint" checked> Show Sprint Stamina</label><br>
+            <label><input type="checkbox" id="show-breath" checked> Show Breath Stamina</label><br>
+            <label><input type="checkbox" id="show-mic" checked> Show Mic Range</label><br>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>

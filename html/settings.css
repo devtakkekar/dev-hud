@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.settings-modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 10, 10, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    transition: background 0.2s;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+#settings-modal {
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(30, 30, 35, 0.92);
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    padding: 24px 24px 18px 24px;
+    min-width: 260px;
+    max-width: 340px;
+    width: 100%;
+    color: #fff;
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: color 0.15s;
+    align-self: flex-start;
+}
+.close-btn:hover {
+    color: #ff5555;
+}
+
+#hud-settings-form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+#hud-settings-form label {
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 2px 0;
+}
+#hud-settings-form button[type="submit"] {
+    margin-top: 10px;
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 0;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(50,50,100,0.09);
+    transition: background 0.35s cubic-bezier(0.4,0,0.2,1), color 0.25s, transform 0.25s;
+    width: 100%;
+}
+#hud-settings-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 18px rgba(80,80,180,0.13);
+}
+#hud-settings-form button[type="submit"]:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(50,50,100,0.09);
+}
+
+@media (max-width: 400px) {
+    #settings-modal {
+        min-width: 90vw;
+        max-width: 98vw;
+        padding: 8vw 2vw;
+    }
+}
