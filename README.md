@@ -1,6 +1,7 @@
 # QB Core Responsive HUD Overlay
 
 A responsive, customizable HUD overlay for QB Core using HTML, CSS, and JavaScript.
+( still build in progress not the final build) **
 
 ## Features
 - Displays bank and cash amount at the top right
