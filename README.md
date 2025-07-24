@@ -1,4 +1,4 @@
-# QB Core Responsive HUD Overlay
+# QB Core Responsive HUD Overlay (PvP Style)
 
 A responsive, customizable HUD overlay for QB Core using HTML, CSS, and JavaScript.
 ( still build in progress not the final build) **
@@ -23,6 +23,10 @@ A responsive, customizable HUD overlay for QB Core using HTML, CSS, and JavaScri
 - Integrate the JavaScript logic with your QB Core framework/game to update HUD values dynamically.
 - Replace SVG icons in the `assets/` folder as needed.
 
+## Preview
+<img width="489" height="153" alt="Screenshot_5" src="https://github.com/user-attachments/assets/40b15c97-c75a-400f-9009-cf62540b6523" />
+
+
 ## File Structure
 - `index.html` — Main HUD overlay
 - `hud.css` — Responsive styles
@@ -30,7 +34,3 @@ A responsive, customizable HUD overlay for QB Core using HTML, CSS, and JavaScri
 - `settings.html` — HUD settings page
 - `settings.js` — Settings logic
 - `assets/` — SVG icons
-
----
-
-**Demo logic is included for preview. Integrate with your game for real data.**
